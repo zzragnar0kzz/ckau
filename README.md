@@ -1,8 +1,10 @@
 # ckau
 Console KMS Activation Utility
 
+![HveMuYMY68](https://user-images.githubusercontent.com/60903639/107022007-b452af00-6759-11eb-96d1-bf7ece664d1d.gif)
+
 # What ckau is
-The Console KMS Activation Utility is essentially [QDPS](https://github.com/zzragnar0kzz/qdps) combined with an extremely rudimentary frontend for some functions of the SLMGR VB script. It can perform a network scan of specified IP address(es) and port(s), and by utilizing SLMGR, it can attempt to activate Windows against any host(s) found during such a scan, or against any host(s) identified in a previous scan. It can also be used to display the current and/or legacy set(s) of recognized public KMS client setup keys, or to get a quick count of the number of IP address(es) in a given range.
+ckau is essentially [QDPS](https://github.com/zzragnar0kzz/qdps) combined with an extremely rudimentary frontend for some functions of the SLMGR VB script. It can perform a network scan of specified IP address(es) and port(s), and by utilizing SLMGR, it can attempt to activate Windows against any host(s) found during such a scan, or against any host(s) identified in a previous scan. It can also be used to display the current and/or legacy set(s) of recognized public KMS client setup keys, or to get a quick count of the number of IP address(es) in a given range.
 
 # What ckau ain't
 ckau is not an "advance directly to Go" means of bypassing activation. Beyond network scanning and data output, any KMS-related abilities of ckau are basically useless without access to a KMS host. ckau is not a KMS host, and it does not and will not provide access to any KMS host services which the user does not already possess.
