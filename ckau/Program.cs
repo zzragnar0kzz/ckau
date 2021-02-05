@@ -428,14 +428,8 @@ public class Program
     static async Task Main(string[] args)
     {
         Console.WriteLine($"\n\t{PROGRAM_TITLE}");
-        try
+        try // argument validation
         {
-            // argument validation
-            if (args.Length == 0 || (args.Length == 1 && (args.Contains("-h") || args.Contains("--help") || args.Contains("-?")))) // supplied arguments contain one or more of the defined "show help" flag(s), or there are no arguments
-            {
-                ShowHelp(null); // display the generic built-in help
-                return; // terminate now
-            }
             if (args.Length == 2 && (args.Contains("-h") || args.Contains("--help") || args.Contains("-?"))) // two arguments : detailed help for one or more argument(s)
             {
                 if (args.Contains("all")) { ShowHelp("all"); } // display detailed help for all arguments
@@ -454,6 +448,11 @@ public class Program
                 else if (args.Contains("-v") || args.Contains("--verbose")) { ShowHelp("-v"); }
                 else if (args.Contains("-V") || args.Contains("--validkeys")) { ShowHelp("-V"); }
                 else { ShowHelp(null); } // display generic help
+                return; // terminate now
+            }
+            else if (args.Length == 0 || args.Contains("-h") || args.Contains("--help") || args.Contains("-?")) // supplied arguments contain one or more of the defined "show help" flag(s), or there are no arguments
+            {
+                ShowHelp(null); // display the generic built-in help
                 return; // terminate now
             }
             if (args.Contains("-L") || args.Contains("--legacykeys")) { ckau.LegacyKeys = true; } // include keys for legacy and esoteric editions of Windows
