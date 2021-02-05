@@ -18,7 +18,7 @@ The latest release, and previous releases, can be found [here](https://github.co
 # Usage
 ckau can be launched from the terminal, or via a shortcut, with zero or more supported arguments. Syntax is as follows:
 
-`ckau.exe [-e <edition>] [-f] [-l] [-L] [-n] [-p <ports>] [-q <mask>] [-s <servers>] [-S <tick>] [-t <timeout>] [-U] [-v]`
+``ckau.exe [-e <edition>] [-f] [-l] [-L] [-n] [-p <ports>] [-q <mask>] [-s <servers>] [-S <tick>] [-t <timeout>] [-U] [-v]``
 
 `ckau.exe -V [-L] [-U]`
 
