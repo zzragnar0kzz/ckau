@@ -401,19 +401,19 @@ public class Program
     private static readonly string resultfile = Path.Combine(ckaupath, RESULT_FILENAME); // condensed list of most recent scan results at ckaupath/RESULT_FILENAME
     private static readonly Dictionary<string, string> validFlags = new Dictionary<string, string> // table of valid command line arguments with a brief description of each
     {
-        { "-e", $"{"(--edition)",-18}The edition of Windows to be activated.\n{"",28}Specify a non-null, non-whitespace string for <edition>.\n{"",28}If omitted or invalid, <edition> defaults to the installed edition." },
         { "-f", $"{"(--force)",-18}Bypass any user prompt(s) to continue." },
         { "-l", $"{"(--local)",-18}Add localhost's IP address(es) to the scan list." },
         { "-L", $"{"(--legacykeys)",-18}Include keys from legacy and esoteric Windows editions." },
-        { "-n", $"{"(--noscan)",-18}Disable network scan and refer to existing results file for valid online host(s).\n{"",28}Any value(s) specified for <ports> and/or <servers> will be ignored." },
-        { "-p", $"{"(--ports)",-18}Port(s) to scan in a space-delineated list.\n{"",28}Specify one or more integer(s) X for <ports>; for each, 0 ≤ X ≤ 65535.\n{"",28}If omitted, <ports> defaults to 1688." },
+        { "-n", $"{"(--noscan)",-18}Disable network scan and refer to existing results file for valid online host(s).\n{"",28}Any value(s) specified for <port_nums> and/or <hosts> will be ignored." },
+        { "-p", $"{"(--ports)",-18}Port(s) to scan in a space-delineated list.\n{"",28}Specify one or more integer(s) X for <port_nums>; for each, 0 ≤ X ≤ 65535.\n{"",28}If omitted, <port_nums> defaults to 1688." },
         { "-q", $"{"(--quick)",-18}For each local IPv4 address, add <address>/<mask> to the scan list; implies -l.\n{"",28}Specify an integer X for <mask>, where 0 ≤ X ≤ 32 (default : 24)." },
-        { "-s", $"{"(--servers)",-18}Server(s) to scan in a space-delineated list.\n{"",28}Specify one or more of the following for <servers> :\n{"",30}(1) a DNS hostname or IP address.\n{"",30}(2) a range of IPv4 addresses as a.b.c.d/xx.\n{"",30}(3) a range of IPv4 addresses as a.b.c.d-w.x.y.z." },
-        { "-S", $"{"(--sleep)",-18}Time to wait in milliseconds before querying status of individual scan(s).\n{"",28}Specify an integer X for <tick>, where 10 ≤ X ≤ 65535 (default : 10)." },
-        { "-t", $"{"(--timeout)",-18}Time to wait in milliseconds before automatically cancelling individual scan(s).\n{"",28}Specify an integer X for <timeout>, where 10 ≤ X ≤ 65535 (default : 100)." },
+        { "-s", $"{"(--servers)",-18}Server(s) to scan in a space-delineated list.\n{"",28}Specify one or more of the following for <hosts> :\n{"",30}(1) a DNS hostname or IP address.\n{"",30}(2) a range of IPv4 addresses as a.b.c.d/xx.\n{"",30}(3) a range of IPv4 addresses as a.b.c.d-w.x.y.z." },
+        { "-S", $"{"(--sleep)",-18}Time to wait in milliseconds before querying status of individual scan(s).\n{"",28}Specify an integer X for <interval>, where 10 ≤ X ≤ 65535 (default : 10)." },
+        { "-t", $"{"(--timeout)",-18}Time to wait in milliseconds before automatically cancelling individual scan(s).\n{"",28}Specify an integer X for <interval>, where 10 ≤ X ≤ 65535 (default : 100)." },
         { "-U", $"{"(--updatekeys)",-18}Update the local keys files from the Internet." },
         { "-v", $"{"(--verbose)",-18}Display comprehensive program output." },
         { "-V", $"{"(--validkeys)",-18}Display supported edition(s) and matching KMS client setup key(s)." },
+        { "-w", $"{"(--windows)",-18}The edition of Windows to be activated.\n{"",28}Specify a non-null, non-whitespace string for <edition>.\n{"",28}If omitted or invalid, <edition> defaults to the installed edition." },
         { "-?", $"{"(-h, --help)",-18}Display this help screen, or display detailed help for (all) <argument>(s)." }
     }; // end of validFlags
 
@@ -440,7 +440,7 @@ public class Program
             {
                 if (args.Contains("all")) { ShowHelp("all"); } // display detailed help for all arguments
                 // display detailed help for specific arguments
-                else if (args.Contains("-e") || args.Contains("--edition")) { ShowHelp("-e"); }
+                else if (args.Contains("-w") || args.Contains("--windows")) { ShowHelp("-w"); }
                 else if (args.Contains("-f") || args.Contains("--force")) { ShowHelp("-f"); }
                 else if (args.Contains("-l") || args.Contains("--local")) { ShowHelp("-l"); }
                 else if (args.Contains("-L") || args.Contains("--legacykeys")) { ShowHelp("-L"); }
@@ -482,7 +482,7 @@ public class Program
                         || args[i].Equals("-n") || args[i].Equals("--noscan")
                         || args[i].Equals("-U") || args[i].Equals("--updatekeys")
                         || args[i].Equals("-v") || args[i].Equals("--verbose")) { } // these flags should have already been processed above, so do nothing
-                    else if ((args[i].Equals("-e") || args[i].Equals("--edition")) && !string.IsNullOrWhiteSpace(args[j])) ckau.Edition = args[j]; // the edition to activate
+                    else if ((args[i].Equals("-w") || args[i].Equals("--windows")) && !string.IsNullOrWhiteSpace(args[j])) ckau.Edition = args[j]; // the edition to activate
                     else if (args[i].Equals("-p") || args[i].Equals("--ports")) // one or more ports to scan
                     {
                         for (j = i + 1; j < args.Length; j++) // process any arguments following this switch
@@ -611,7 +611,7 @@ public class Program
 
     static void ShowHelp(string s) // display brief or detailed help
     {
-        Console.WriteLine($"\n{"Usage",10} : ckau.exe [-e <edition>] [-f] [-l] [-L] [-n] [-p <ports>] [-q <mask>]\n\t\t\t[-s <servers>] [-S <tick>] [-t <timeout>] [-U] [-v]");
+        Console.WriteLine($"\n{"Usage",10} : ckau.exe [-f] [-l] [-L] [-n] [-p <port_nums>] [-q <mask>] [-s <hosts>]\n\t\t\t[-S <interval>] [-t <interval>] [-U] [-v] [-w <edition>]");
         Console.WriteLine($"{"ckau.exe",21} -V [-L] [-U]\n{"ckau.exe",21} -? [all] [<argument>]\n  {SECTION_BREAK}");
         if (s == "all") { foreach ((string flag, string desc) in validFlags) { Console.WriteLine($"{flag,7} {desc}"); } } // display help for all arguments
         else if (string.IsNullOrWhiteSpace(s)) { Console.WriteLine($"{"-?",7} {validFlags["-?"]}"); } // display help for the help arguments
