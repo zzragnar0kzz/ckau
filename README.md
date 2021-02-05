@@ -62,6 +62,14 @@ After an initial run, program data and output files are located at `~/.ckau`.
 # Compiling for Windows
 ckau is developed with Visual Studio, and provided [releases](https://github.com/zzragnar0kzz/ckau/releases) are compiled with same. To compile ckau on Windows, it is recommended that you also do so with VS. Support capabilities are limited.
 
-Clone the [repository](https://github.com/zzragnar0kzz/ckau.git) using your preferred tool, or download the latest archive [here](https://github.com/zzragnar0kzz/ckau/archive/main.zip). Open the solution file.
+Clone the [repository](https://github.com/zzragnar0kzz/ckau.git) using your preferred tool, or download the [latest archive](https://github.com/zzragnar0kzz/ckau/archive/main.zip) and extract it to the desired location. Open the solution file.
+
+
+# Credits
+Code for the progress bar modified from the original cribbed from [here](https://gist.github.com/DanielSWolf/0ab6a96899cc5377bf54); all rights reserved.
+
+Remaining code is licensed under the GPLv3, 2020-2021, all rights reserved.
+
 
 # to-do
+
