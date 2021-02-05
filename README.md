@@ -24,7 +24,7 @@ The latest release, and previous releases, can be found [here](https://github.co
 # Usage
 ckau can be launched from the terminal, or via a shortcut, with zero or more supported arguments. Syntax is as follows:
 
-`ckau.exe [-e <edition>] [-f] [-l] [-L] [-n] [-p <port_nums>] [-q <mask>] [-s <hosts>] [-S <interval>] [-t <interval>] [-U] [-v]`
+`ckau.exe [-f] [-l] [-L] [-n] [-p <port_nums>] [-q <mask>] [-s <hosts>] [-S <interval>] [-t <interval>] [-U] [-v] [-w <edition>]`
 
 - or
 
@@ -35,8 +35,6 @@ ckau can be launched from the terminal, or via a shortcut, with zero or more sup
 `ckau.exe -? [all] [<argument>]`
 
 Supported arguments and a brief description of each:
-
-`-e (--edition)` The edition of Windows to activate against. Specify a non-null, non-whitespace string for `<edition>`. This must match a valid edition in the program's internal dictionary; if it does not, or if this argument is omitted, `<edition>` will default to the edition installed on localhost.
 
 `-f (--force)` Automatically bypass any prompts for user input; disabled by default.
 
@@ -64,6 +62,8 @@ Supported arguments and a brief description of each:
 `-v (--verbose)` Display comprehensive program output.
 
 `-V (--validkeys)` Display supported edition(s) and matching KMS client setup key(s).
+
+`-w (--windows)` The edition of Windows to activate against. Specify a non-null, non-whitespace string for `<edition>`. This must match a valid edition in the program's internal dictionary; if it does not, or if this argument is omitted, `<edition>` will default to the edition installed on localhost.
 
 `-? (-h, --help)` Display this help screen, or display detailed help for `all` arguments or for a specific `<argument>`.
 
