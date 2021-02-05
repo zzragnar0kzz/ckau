@@ -58,10 +58,10 @@ Supported arguments and a brief description of each:
 Launching the program with zero arguments is equivalent to launching it with `-?` as the only argument.
 
 After an initial run, program data and output files are located at `~/.ckau`:
-- `ckau.log` is a continuing record of program activity.
-- `scan.results` is a CSV-formatted file containing the results of the most recent successful scan
-- `windows.gvlk` is a CSV-formatted file containing supported Windows edition/KMS key pairs
-- `windows-legacy.gvlk` is a CSV-formatted file containing supported legacy Windows edition/KMS key pairs
+- `ckau.log` is a text file containing a continuing record of program activity.
+- `scan.results` is a CSV-formatted file containing the results of the most recent successful scan.
+- `windows.gvlk` is a CSV-formatted file containing supported Windows edition/KMS key pairs.
+- `windows-legacy.gvlk` is a CSV-formatted file containing supported legacy Windows edition/KMS key pairs.
 
 
 # Compiling for Windows
