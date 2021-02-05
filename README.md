@@ -81,8 +81,9 @@ ckau is developed using Visual Studio, and all provided [releases](https://githu
 1. Clone the [repository](https://github.com/zzragnar0kzz/ckau.git) using your preferred tool, or download the [latest archive](https://github.com/zzragnar0kzz/ckau/archive/main.zip) and extract it to the desired location.
 2. Open the project solution file.
 3. Add the following NuGet packages:
-    - [Html Agility Pack (HAP)](https://html-agility-pack.net/)
-    - [IPAddressRange](https://github.com/jsakamoto/ipaddressrange)
+    - [Html Agility Pack (HAP)](https://www.nuget.org/packages/HtmlAgilityPack/)
+    - [IPAddressRange](https://www.nuget.org/packages/IPAddressRange/)
+    - [System.Management](https://www.nuget.org/packages/System.Management/)
 4. ?
 5. Compile
 
