@@ -6,7 +6,7 @@ Console KMS Activation Utility
 
 
 # What ckau is
-ckau is essentially [QDPS](https://github.com/zzragnar0kzz/qdps) with extensions, combined with a HTML parser and an extremely rudimentary frontend for some functions of the SLMGR VB script. It can perform a network scan of specified IP address(es) and port(s), and by utilizing SLMGR, it can attempt to activate Windows against any host(s) found during such a scan, or against any host(s) identified in a previous scan. It can also be used to display the current and/or legacy set(s) of recognized public KMS client setup keys, or to get a quick count of the number of IP address(es) in a given range.
+ckau is essentially [QDPS](https://github.com/zzragnar0kzz/qdps) with extensions, combined with a HTML parser and an extremely rudimentary frontend for some functions of the [SLMGR](https://docs.microsoft.com/en-us/windows-server/get-started/activation-slmgr-vbs-options) VB script. It can perform a network scan of specified IP address(es) and port(s), and by utilizing SLMGR, it can attempt to activate Windows against any host(s) found during such a scan, or against any host(s) identified in a previous scan. It can also be used to display the current and/or legacy set(s) of recognized public KMS client setup keys, or to get a quick count of the number of IP address(es) in a given range.
 
 
 # What ckau ain't
