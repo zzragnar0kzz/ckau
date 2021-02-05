@@ -110,7 +110,7 @@ Icon for the executable sourced from [icon-icons.com](https://icon-icons.com/ico
 
 Certain arguments are rife with the potential for abuse:
 - Most KMS-related functions require elevated privileges.
-- Do not use `-e` with an `<edition>` value that differs from the installed edition unless you know what you are doing.
+- Do not use `-w` with an `<edition>` value that differs from the installed edition unless you know what you are doing.
 - Do not use `-q` with a `<mask>` value less than or equal to 8 unless you are prepared to wait. For a long time.
 - The preceding also applies to CIDR IPv4 ranges supplied as any of `<hosts>` with `-s`.
 
