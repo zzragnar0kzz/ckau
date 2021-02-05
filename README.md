@@ -11,7 +11,7 @@ ckau is not an "advance directly to Go" means of bypassing activation. Beyond ne
 See above. ckau relies on existing KMS infrastructure, which is up to the user to provide. This infrastructure is not provided by ckau, nor will it ever be. The setup of such infrastructure is beyond the scope of this project, and any inquiries regarding the same will be summarily ignored.
 
 # Installation
-The latest release, and previous releases, can be found [here](https://github.com/zzragnar0kzz/ckau/releases). Download the desired release package and extract it to a directory of your choice; ckau is portable, so it can be launched directly from that location, or moved to any other location and launched from there.
+The latest release, and previous releases, can be found [here](https://github.com/zzragnar0kzz/ckau/releases). Download the desired release package and extract it to a directory of your choice. ckau is fairly portable, so as long as all of its files are present, it can be moved to and launched from virtually anywhere.
 
 # Usage
 ckau can be launched from the terminal, or via a shortcut, with zero or more supported arguments. Syntax is as follows:
