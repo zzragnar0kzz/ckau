@@ -66,8 +66,13 @@ After an initial run, program data and output files are located at `~/.ckau`:
 
 # Compiling for Windows
 ckau is developed with Visual Studio, and provided [releases](https://github.com/zzragnar0kzz/ckau/releases) are compiled with same. To compile ckau on Windows, it is recommended that you also do so with VS. Support capabilities are limited.
-
-Clone the [repository](https://github.com/zzragnar0kzz/ckau.git) using your preferred tool, or download the [latest archive](https://github.com/zzragnar0kzz/ckau/archive/main.zip) and extract it to the desired location. Open the solution file.
+1. Clone the [repository](https://github.com/zzragnar0kzz/ckau.git) using your preferred tool, or download the [latest archive](https://github.com/zzragnar0kzz/ckau/archive/main.zip) and extract it to the desired location.
+2. Open the solution file.
+3. Add the following NuGet packages:
+    - [Html Agility Pack (HAP)](https://html-agility-pack.net/)
+    - [IPAddressRange](https://github.com/jsakamoto/ipaddressrange)
+4. ?
+5. Compile
 
 
 # Credits
