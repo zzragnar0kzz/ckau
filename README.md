@@ -114,3 +114,4 @@ Certain arguments are rife with the potential for abuse:
 - Do not use `-q` with a `<mask>` value less than or equal to 8 unless you are prepared to wait. For a long time.
 - The preceding also applies to CIDR IPv4 ranges supplied as any of `<hosts>` with `-s`.
 
+ckau is provided AS-IS, with ABSOLUTELY NO WARRANTY, EXPRESS OR IMPLIED, of any kind. The user assumes any and all risk associated with use of the software.
