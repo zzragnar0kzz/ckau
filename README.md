@@ -18,9 +18,13 @@ The latest release, and previous releases, can be found [here](https://github.co
 # Usage
 ckau can be launched from the terminal, or via a shortcut, with zero or more supported arguments. Syntax is as follows:
 
-``ckau.exe [-e <edition>] [-f] [-l] [-L] [-n] [-p <ports>] [-q <mask>] [-s <servers>] [-S <tick>] [-t <timeout>] [-U] [-v]``
+`ckau.exe [-e <edition>] [-f] [-l] [-L] [-n] [-p <port_nums>] [-q <mask>] [-s <hosts>] [-S <interval>] [-t <interval>] [-U] [-v]`
+
+- or
 
 `ckau.exe -V [-L] [-U]`
+
+- or
 
 `ckau.exe -? [all] [<argument>]`
 
@@ -36,18 +40,18 @@ Supported arguments and a brief description of each:
 
 `-n (--noscan)` Disable network scan if the local scan results file exists and is not empty, and feed the contents of that file to SLMGR for activation, overriding any value(s) provided for `-p` and `-s`. If the file does not exist, or it is empty, ignore this argument and perform a network scan with the other supplied argument(s).
 
-`-p (--ports)` A space-delineated list of the port(s) to scan on the supplied address(es). Specify one or more integer(s) X for `<ports>`; for each, 0 ≤ X ≤ 65535. Any  values supplied for `<ports>` which are outside of this range will be discarded; if there are no valid supplied values, or if this argument is omitted, `<ports>` will default to 1688.
+`-p (--ports)` A space-delineated list of the port(s) to scan on the supplied address(es). Specify one or more integer(s) X for `<port_nums>`; for each, 0 ≤ X ≤ 65535. Any  values supplied for `<port_nums>` which are outside of this range will be discarded; if there are no valid supplied values, or if this argument is omitted, `<port_nums>` will default to 1688.
 
 `-q (--quick)` For each IPv4 address assigned to localhost, use `<mask>` to create a range of addresses, and add that range to the scan list. Specify an integer X for `<mask>`, where 0 ≤ X ≤ 32.
 
-`-s (--servers)` A space-delineated list of server(s) to scan. Specify one or more of the following for `<servers>`:
+`-s (--servers)` A space-delineated list of server(s) to scan. Specify one or more of the following for `<hosts>`:
 1. a single DNS hostname or IP address;
 2. a range of IPv4 addresses as `a.b.c.d/xx`, where 0 ≤ `xx` ≤ 32; or
 3. a range of IPv4 addresses as `a.b.c.d-w.x.y.z`.
 
-`-S (--sleep)` Time to wait (in milliseconds) before querying the status of an individual scan. Specify an integer X for `<tick>`, where 10 ≤ X ≤ 65535; if the value supplied is invalid, or if this argument is omitted, `<tick>` defaults to 10.
+`-S (--sleep)` Time to wait (in milliseconds) before querying the status of an individual scan. Specify an integer X for `<interval>`, where 10 ≤ X ≤ 65535; if the value supplied is invalid, or if this argument is omitted, `<interval>` defaults to 10.
 
-`-t (--timeout)` Time to wait (in milliseconds) before automatically cancelling an individual scan. Specify an integer X for `<timeout>`, where 10 ≤ X ≤ 65535; if the value supplied is invalid, or if this argument is omitted, `<timeout>` defaults to 100.
+`-t (--timeout)` Time to wait (in milliseconds) before automatically cancelling an individual scan. Specify an integer X for `<interval>`, where 10 ≤ X ≤ 65535; if the value supplied is invalid, or if this argument is omitted, `<interval>` defaults to 100.
 
 `-U (--updatekeys)` Update the local keys files from the Internet.
 
@@ -67,9 +71,9 @@ After an initial run, program data and output files are located at `~/.ckau`:
 
 
 # Compiling for Windows
-ckau is developed with Visual Studio, and provided [releases](https://github.com/zzragnar0kzz/ckau/releases) are compiled with same. To compile ckau on Windows, it is recommended that you also do so with VS. Support capabilities are limited.
+ckau is developed using Visual Studio, and all provided [releases](https://github.com/zzragnar0kzz/ckau/releases) are compiled using the same. To compile ckau on Windows, it is recommended that you also do so with VS. Support capabilities are limited.
 1. Clone the [repository](https://github.com/zzragnar0kzz/ckau.git) using your preferred tool, or download the [latest archive](https://github.com/zzragnar0kzz/ckau/archive/main.zip) and extract it to the desired location.
-2. Open the solution file.
+2. Open the project solution file.
 3. Add the following NuGet packages:
     - [Html Agility Pack (HAP)](https://html-agility-pack.net/)
     - [IPAddressRange](https://github.com/jsakamoto/ipaddressrange)
