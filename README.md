@@ -1,19 +1,25 @@
 # ckau
 Console KMS Activation Utility
 
+
 ![HveMuYMY68](https://user-images.githubusercontent.com/60903639/107022007-b452af00-6759-11eb-96d1-bf7ece664d1d.gif)
 
+
 # What ckau is
-ckau is essentially [QDPS](https://github.com/zzragnar0kzz/qdps) combined with an extremely rudimentary frontend for some functions of the SLMGR VB script. It can perform a network scan of specified IP address(es) and port(s), and by utilizing SLMGR, it can attempt to activate Windows against any host(s) found during such a scan, or against any host(s) identified in a previous scan. It can also be used to display the current and/or legacy set(s) of recognized public KMS client setup keys, or to get a quick count of the number of IP address(es) in a given range.
+ckau is essentially [QDPS](https://github.com/zzragnar0kzz/qdps) with extensions, combined with a HTML parser and an extremely rudimentary frontend for some functions of the SLMGR VB script. It can perform a network scan of specified IP address(es) and port(s), and by utilizing SLMGR, it can attempt to activate Windows against any host(s) found during such a scan, or against any host(s) identified in a previous scan. It can also be used to display the current and/or legacy set(s) of recognized public KMS client setup keys, or to get a quick count of the number of IP address(es) in a given range.
+
 
 # What ckau ain't
 ckau is not an "advance directly to Go" means of bypassing activation. Beyond network scanning and data output, any KMS-related abilities of ckau are basically useless without access to a KMS host. ckau is not a KMS host, and it does not and will not provide access to any KMS host services which the user does not already possess.
 
+
 # What ckau will never be
 See above. ckau relies on existing KMS infrastructure, which is up to the user to provide. This infrastructure is not provided by ckau, nor will it ever be. The setup of such infrastructure is beyond the scope of this project, and any inquiries regarding the same will be summarily ignored.
 
+
 # Installation
 The latest release, and previous releases, can be found [here](https://github.com/zzragnar0kzz/ckau/releases). Download the desired release package and extract it to a directory of your choice. ckau is fairly portable, so as long as all of its files are present, it can be moved to and launched from virtually anywhere.
+
 
 # Usage
 ckau can be launched from the terminal, or via a shortcut, with zero or more supported arguments. Syntax is as follows:
@@ -93,5 +99,11 @@ Icon for the executable sourced from [icon-icons.com](https://icon-icons.com/ico
 Remaining code is licensed under the GPLv3, 2020-2021. All rights reserved.
 
 
-# to-do
+# Addendum
+
+Certain arguments are rife with the potential for abuse:
+- Most KMS-related functions require elevated privileges.
+- Do not use `-e` with an `<edition>` value that differs from the installed edition unless you know what you are doing.
+- Do not use `-q` with a `<mask>` value less than or equal to 8 unless you are prepared to wait. For a long time.
+- The preceding also applies to CIDR IPv4 ranges supplied as any of `<hosts>` with `-s`.
 
