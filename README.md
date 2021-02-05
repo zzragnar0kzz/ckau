@@ -66,9 +66,13 @@ Clone the [repository](https://github.com/zzragnar0kzz/ckau.git) using your pref
 
 
 # Credits
-Code for the progress bar modified from the original cribbed from [here](https://gist.github.com/DanielSWolf/0ab6a96899cc5377bf54); all rights reserved.
+Code for the progress bar modified from the original code cribbed from [DanielSWolf](https://gist.github.com/DanielSWolf/0ab6a96899cc5377bf54). All rights reserved.
 
-Remaining code is licensed under the GPLv3, 2020-2021, all rights reserved.
+[Html Agility Pack (HAP)](https://html-agility-pack.net/) is the property of its owners. All rights reserved.
+
+Icon for the executable sourced from [icon-icons.com](https://icon-icons.com/icon/cow-face/98730). All rights reserved.
+
+Remaining code is licensed under the GPLv3, 2020-2021. All rights reserved.
 
 
 # to-do
