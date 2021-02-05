@@ -11,7 +11,7 @@ ckau is not an "advance directly to Go" means of bypassing activation. Beyond ne
 See above. ckau relies on existing KMS infrastructure, which is up to the user to provide. This infrastructure is not provided by ckau, nor will it ever be. The setup of such infrastructure is beyond the scope of this project, and any inquiries regarding the same will be summarily ignored.
 
 # Installation
-The latest release, and previous releases, can be found [here](https://github.com/zzragnar0kzz/ckau/releases). Download the desired release package and extract it to a directory of your choice; ckau is portable, so it can be ran directly from that location, or moved to any other location and ran from there.
+The latest release, and previous releases, can be found [here](https://github.com/zzragnar0kzz/ckau/releases). Download the desired release package and extract it to a directory of your choice; ckau is portable, so it can be launched directly from that location, or moved to any other location and launched from there.
 
 # Usage
 ckau can be launched from the terminal, or via a shortcut, with zero or more supported arguments. Syntax is as follows:
@@ -57,7 +57,12 @@ Supported arguments and a brief description of each:
 
 Launching the program with zero arguments is equivalent to launching it with `-?` as the only argument.
 
-After an initial run, program data and output files are located at `~/.ckau`.
+After an initial run, program data and output files are located at `~/.ckau`:
+- `ckau.log` is a continuing record of program activity.
+- `scan.results` is a CSV-formatted file containing the results of the most recent successful scan
+- `windows.gvlk` is a CSV-formatted file containing supported Windows edition/KMS key pairs
+- `windows-legacy.gvlk` is a CSV-formatted file containing supported legacy Windows edition/KMS key pairs
+
 
 # Compiling for Windows
 ckau is developed with Visual Studio, and provided [releases](https://github.com/zzragnar0kzz/ckau/releases) are compiled with same. To compile ckau on Windows, it is recommended that you also do so with VS. Support capabilities are limited.
