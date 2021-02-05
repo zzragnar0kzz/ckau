@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Description>Console KMS Activation Utility</Description>
+    <Authors>Jeff Guziak</Authors>
+    <ApplicationIcon>22231cowface_98730_32x32.ico</ApplicationIcon>
+    <Company />
+    <Copyright>2020-2021 Jeff Guziak</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.30" />
+    <PackageReference Include="IPAddressRange" Version="4.1.2" />
+    <PackageReference Include="System.Management" Version="5.0.0" />
+  </ItemGroup>
+
+</Project>
