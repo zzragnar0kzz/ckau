@@ -77,18 +77,26 @@ After an initial run, program data and output files are located at `~/.ckau`:
 
 
 # Compiling for Windows
-ckau is developed using Visual Studio, and all provided [releases](https://github.com/zzragnar0kzz/ckau/releases) are compiled using the same. To compile ckau on Windows, it is recommended that you also do so with VS. Support capabilities are limited.
+ckau is developed using Visual Studio on a x64 Windows 10 platform, and all provided [releases](https://github.com/zzragnar0kzz/ckau/releases) are compiled using the same. Support capabilities are limited.
 1. Clone the [repository](https://github.com/zzragnar0kzz/ckau.git) using your preferred tool, or download the [latest archive](https://github.com/zzragnar0kzz/ckau/archive/main.zip) and extract it to the desired location.
 2. Open the project solution file.
 3. Add the following NuGet packages:
     - [Html Agility Pack (HAP)](https://www.nuget.org/packages/HtmlAgilityPack/)
     - [IPAddressRange](https://www.nuget.org/packages/IPAddressRange/)
     - [System.Management](https://www.nuget.org/packages/System.Management/)
-4. ?
+4. Select "Release" from the Solution Configurations dropdown
 5. Compile
 
 
+# License
+ckau is made available under the terms of the GPLv3. ™ and © 2020-2021 Jeff Guziak. All rights reserved.
+
+
 # Credits
+[KMS client setup keys for current editions](https://docs.microsoft.com/en-us/windows-server/get-started/kmsclientkeys).
+
+[KMS client setup keys for legacy editions](https://py-kms.readthedocs.io/en/latest/Keys.html).
+
 [Html Agility Pack (HAP)](https://html-agility-pack.net/) is the property of its owners. All rights reserved.
 
 Icon for the executable sourced from [icon-icons.com](https://icon-icons.com/icon/cow-face/98730), and is the property of its owners. All rights reserved.
@@ -96,8 +104,6 @@ Icon for the executable sourced from [icon-icons.com](https://icon-icons.com/ico
 [IPAddressRange](https://github.com/jsakamoto/ipaddressrange) is the property of its owners. All rights reserved.
 
 [Progress bar](https://gist.github.com/DanielSWolf/0ab6a96899cc5377bf54) original code is the property of its owners. All rights reserved.
-
-Remaining code is licensed under the GPLv3, 2020-2021. All rights reserved.
 
 
 # Addendum
