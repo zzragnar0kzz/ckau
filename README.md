@@ -89,7 +89,7 @@ ckau is developed using Visual Studio on a x64 Windows 10 platform, and all prov
 
 
 # License
-ckau is made available under the terms of the GPLv3. ™ and © 2020-2021 Jeff Guziak. All rights reserved.
+ckau is made available under the terms of the [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html). ™ and © 2020-2021 Jeff Guziak. All rights reserved.
 
 
 # Credits
